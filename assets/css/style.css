@@ -6883,7 +6883,8 @@ a.added_to_cart.wc-forward {
 .woocommerce.product-grid-view ul.products li.product {
 	text-align: center;
 }
-.woocommerce ul.products li.product > a.yith-wcqv-button {
+.woocommerce ul.products li.product > a.yith-wcqv-button,
+.woocommerce ul.products li.product > a.compare.button   {
 	display: none;
 }
 .woocommerce ul.products .grid-hide {

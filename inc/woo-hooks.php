@@ -73,3 +73,14 @@ if ( function_exists( 'YITH_WCQV_Frontend' ) ) {
 	remove_action( 'woocommerce_after_shop_loop_item', array( YITH_WCQV_Frontend(), 'yith_add_quick_view_button' ), 15 );
 	remove_action( 'yith_wcwl_table_after_product_name', array( YITH_WCQV_Frontend(), 'yith_add_quick_view_button' ), 15 );
 }
+
+// Yith Compare - the plugin's own installer creates the default "Compare" page using
+// a [yith_woocompare_table] shortcode that this plugin version never registers, so the
+// page just prints the raw shortcode text. Register it so the page actually works.
+if ( class_exists( 'YITH_WooCompare_Table' ) && ! shortcode_exists( 'yith_woocompare_table' ) ) {
+	add_shortcode( 'yith_woocompare_table', function() {
+		ob_start();
+		YITH_WooCompare_Table::instance()->output_table();
+		return ob_get_clean();
+	} );
+}
