@@ -1834,6 +1834,9 @@ body .rt-sticky-menu .rt-cover {
 }
 .header-style-4.trheader .header-wrap-part {
 	margin-top: 15px;
+    background-color: rgba(0,0,0, 0.5);
+    border-radius: 8px;
+    padding: 0 24px;
 }
 .header-style-4.trheader.non-stickh .header-wrap-part {
 	margin-top: 0px;
