@@ -15,7 +15,7 @@ function foodcart_register_required_plugins() {
 			'source'       => 'foodcart-core.zip',
 			'required'     =>  true,
 			'external_url' => 'http://radiustheme.com',
-			'version'      => '2.2'
+			'version'      => '2.3'
 		),
 		array(
 			'name'         => 'RT Framework',
@@ -36,7 +36,7 @@ function foodcart_register_required_plugins() {
 			'source'       => 'food-menu-pro.zip',
 			'required'     =>  true,
 			'external_url' => 'http://radiustheme.com',
-			'version'      => '5.3.1'
+			'version'      => '6.0.7'
 		),
 		array(
 			'name'         => 'LayerSlider WP',
@@ -44,7 +44,7 @@ function foodcart_register_required_plugins() {
 			'source'       => 'LayerSlider.zip',
 			'required'     => false,
 			'external_url' => 'https://layerslider.kreaturamedia.com',
-			'version'      => '8.1.2'
+			'version'      => '8.4.1'
 		),
 		
 		// Repository
