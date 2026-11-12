@@ -130,7 +130,6 @@ if( ! function_exists( 'foodcart_related_recipe' )){
 		wp_enqueue_style( 'owl-carousel' );
 		wp_enqueue_style( 'owl-theme-default' );
 		wp_enqueue_script( 'owl-carousel' );
-		
 		if( $related_query->have_posts() ) { ?>
 
 		<div class="related-recipe">	
@@ -181,8 +180,10 @@ if( ! function_exists( 'foodcart_related_recipe' )){
 									<?php
 										$i = 1;
 										$term_lists = get_the_terms( get_the_ID(), 'foodcart_recipe_category' );
-										foreach ( $term_lists as $term_list ){
-											$link = get_term_link( $term_list->term_id, 'foodcart_recipe_category' ); ?><?php if ( $i > 1 ){ echo esc_html( ', ' ); } ?><a href="<?php echo esc_url( $link ); ?>"><?php echo esc_html( $term_list->name ); ?></a><?php $i++; } ?>
+										if ( $term_lists && ! is_wp_error( $term_lists ) ) {
+											foreach ( $term_lists as $term_list ){
+												$link = get_term_link( $term_list->term_id, 'foodcart_recipe_category' ); ?><?php if ( $i > 1 ){ echo esc_html( ', ' ); } ?><a href="<?php echo esc_url( $link ); ?>"><?php echo esc_html( $term_list->name ); ?></a><?php $i++; }
+										} ?>
 								</div>
 								<?php if ( !empty( $foodcart_chef_social ) ){ ?>
 								<div class="chef-social-wrap">

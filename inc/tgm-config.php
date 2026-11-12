@@ -15,7 +15,7 @@ function foodcart_register_required_plugins() {
 			'source'       => 'foodcart-core.zip',
 			'required'     =>  true,
 			'external_url' => 'http://radiustheme.com',
-			'version'      => '2.1'
+			'version'      => '2.2'
 		),
 		array(
 			'name'         => 'RT Framework',
@@ -24,14 +24,6 @@ function foodcart_register_required_plugins() {
 			'required'     =>  true,
 			'external_url' => 'http://radiustheme.com',
 			'version'      => '1.15'
-		),
-		array(
-			'name'         => 'RT Demo Importer',
-			'slug'         => 'rt-demo-importer',
-			'source'       => 'rt-demo-importer.zip',
-			'required'     =>  true,
-			'external_url' => 'http://radiustheme.com',
-			'version'      => '6.0.1'
 		),
 		array(
 			'name'     => 'Food Menu',
@@ -44,7 +36,7 @@ function foodcart_register_required_plugins() {
 			'source'       => 'food-menu-pro.zip',
 			'required'     =>  true,
 			'external_url' => 'http://radiustheme.com',
-			'version'      => '6.0.7'
+			'version'      => '5.3.1'
 		),
 		array(
 			'name'         => 'LayerSlider WP',
@@ -52,7 +44,7 @@ function foodcart_register_required_plugins() {
 			'source'       => 'LayerSlider.zip',
 			'required'     => false,
 			'external_url' => 'https://layerslider.kreaturamedia.com',
-			'version'      => '8.4.1'
+			'version'      => '8.1.2'
 		),
 		
 		// Repository
@@ -99,6 +91,11 @@ function foodcart_register_required_plugins() {
 		array(
 			'name'     => 'Instagram Feed',
 			'slug'     => 'instagram-feed',
+			'required' => false,
+		),
+		array(
+			'name'     => 'Easy Demo Importer',
+			'slug'     => 'easy-demo-importer',
 			'required' => false,
 		),
 	);

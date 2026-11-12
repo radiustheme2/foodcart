@@ -3523,15 +3523,8 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 *
 					 * @param string $title Unused in this implementation.
 					 */
-//					public function before( $title = '' ) {
-//						if ( empty( $title ) ) {
-//							$title = esc_html( $this->plugin_names[ $this->i ] );
-//						}
-//						parent::before( $title );
-//					}
-
 					public function before( $title = '' ) {
-						if ( empty( $title ) || is_wp_error( $title ) ) {
+						if ( empty( $title ) ) {
 							$title = esc_html( $this->plugin_names[ $this->i ] );
 						}
 						parent::before( $title );

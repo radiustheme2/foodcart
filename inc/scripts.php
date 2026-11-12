@@ -5,7 +5,9 @@
  * @version 1.0
  */
 
-use Elementor\Plugin; 
+use Elementor\Plugin;
+
+
 
 add_action( 'wp_enqueue_scripts', 'foodcart_register_scripts', 12 );
 if ( !function_exists( 'foodcart_register_scripts' ) ) {
@@ -250,3 +252,4 @@ function load_custom_wp_admin_script() {
 }
 
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_script', 20 );
+

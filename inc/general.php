@@ -742,9 +742,14 @@ if ( class_exists( 'WooCommerce' ) ) {
 	function foodcart_register_set_menu_product_type() {
 
 		class WC_Product_Setmenu extends WC_Product {
+			/**
+			 * Product type.
+			 *
+			 * @var string
+			 */
+			protected $product_type = 'setmenu';
 
 			public function __construct( $product ) {
-				$this->product_type = 'setmenu';
 				parent::__construct( $product );
 			}
 		}

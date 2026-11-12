@@ -323,7 +323,7 @@ if ( !class_exists( 'FoodcartTheme_Helper' ) ) {
 		public static function custom_sidebar_fields(){
 			$sidebar_fields = array();
 
-			$sidebar_fields['sidebar'] = __( 'Sidebar', 'foodcart' );
+			$sidebar_fields['sidebar'] = esc_html( 'Sidebar');
 
 			$sidebars = get_option( 'foodcart_custom_sidebars', array() );
 			if ( $sidebars ) {

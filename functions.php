@@ -43,11 +43,9 @@ $foodcart_theme_data = wp_get_theme();
 	require_once FOODCART_INC_DIR . 'general.php';
 	require_once FOODCART_INC_DIR . 'scripts.php';
 	require_once FOODCART_INC_DIR . 'template-vars.php';
-	require_once FOODCART_INC_DIR . 'sidebar-generator.php';	
-
-	// Includes Modules	
-	require_once FOODCART_MODULES_DIR . 'rt-post-related.php';	
+	require_once FOODCART_INC_DIR . 'sidebar-generator.php';
 	require_once FOODCART_MODULES_DIR . 'rt-single-recipe-slider.php';
+	require_once FOODCART_MODULES_DIR . 'rt-post-related.php';
 
 	// WooCommerce
 	if ( class_exists( 'WooCommerce' ) ) {
@@ -74,3 +72,6 @@ $foodcart_theme_data = wp_get_theme();
 		}
 		
 	}
+
+	// Theme Updater
+	require_once FOODCART_INC_DIR . 'Lib/updater/theme-updater.php';

@@ -6781,10 +6781,9 @@ a.added_to_cart.wc-forward {
 .woocommerce .product-thumb-area .product-info {
   opacity: 0;
   position: absolute;
-  right: -46px;
-  bottom: 60px;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+  right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
   transition: all 0.3s ease 0s;
   z-index: 9;
 }
@@ -6792,38 +6791,18 @@ a.added_to_cart.wc-forward {
 	margin: 0;
 	text-align: center;
 	font-size: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px
 }
 .woocommerce .product-thumb-area .product-info ul li {
 	display: inline-block;
 	font-size: 16px;
 	padding: 0 4px;
 	overflow: hidden;
-	-webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-}
-.woocommerce .product-thumb-area .product-info ul li:nth-child(1n) {
-    transform: translateY(-100%);
-}
-.woocommerce .product-thumb-area .product-info ul li:nth-child(2n) {
-    transform: translateY(-100%);
-}
-.woocommerce .product-thumb-area .product-info ul li:nth-child(3n) {
-    transform: translateY(-100%);
-}
-.woocommerce .product-thumb-area:hover .product-info ul li:nth-child(1n) {
-    transform: translateY(0);
-    transition-delay: 0.1s;
-}
-.woocommerce .product-thumb-area:hover .product-info ul li:nth-child(2n) {
-    transform: translateY(0);
-    transition-delay: 0.2s;
-}
-.woocommerce .product-thumb-area:hover .product-info ul li:nth-child(3n) {
-    transform: translateY(0);
-    transition-delay: 0.3s;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .woocommerce .product-thumb-area .product-info ul li a {
 	background: #ffffff;
@@ -6838,6 +6817,19 @@ a.added_to_cart.wc-forward {
 }
 .woocommerce .product-thumb-area:hover .product-info {
 	opacity: 1;
+}
+.woocommerce .product-thumb-area:hover .product-info ul li {
+	opacity: 1;
+	transform: translateX(0);
+}
+.woocommerce .product-thumb-area:hover .product-info ul li:nth-child(1) {
+	transition-delay: 0.05s;
+}
+.woocommerce .product-thumb-area:hover .product-info ul li:nth-child(2) {
+	transition-delay: 0.15s;
+}
+.woocommerce .product-thumb-area:hover .product-info ul li:nth-child(3) {
+	transition-delay: 0.25s;
 }
 .woocommerce #yith-wcwl-popup-message {
   background-color: #000;
@@ -7869,14 +7861,13 @@ p.demo_store {
     content: "\f004";
     font-family: "FontAwesome";
 	position: absolute;
-	text-indent: 0px;
+	text-indent: 0;
 	top: 16px;
     left: 0;
     right: 0;
 	margin: 0;
     text-align: center;
 	line-height: 1;
-	transform: rotate(270deg);
 }
 .woocommerce .product-thumb-area .product-info ul li .yith-wcwl-wishlistaddedbrowse a i:before,
 .woocommerce .product-thumb-area .product-info ul li .yith-wcwl-wishlistexistsbrowse a i:before {
