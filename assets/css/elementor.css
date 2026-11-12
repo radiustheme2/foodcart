@@ -4958,8 +4958,10 @@ body.fp-responsive .section {
 }
 .food-menu-box-layout8 .food-menu-box-item {
 	position: relative;
+    overflow: hidden;
 	background-color: #ffffff;
 	border: 1px solid #d7d7d7;
+    border-radius: 5px;
 	text-align: center;
 	padding: 40px 30px;
 	-webkit-transition: all 0.3s ease-out;
@@ -5043,10 +5045,12 @@ body.fp-responsive .section {
 ------------------------------------------*/
 .food-menu-box-layout9 {
 	position: relative;
+    overflow: hidden;
 	text-align: center;
 	padding: 30px 25px;
 	background: #ffffff;
 	border: 1px solid #d7d7d7;
+    border-radius: 5px;
 	margin-bottom: 30px;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;

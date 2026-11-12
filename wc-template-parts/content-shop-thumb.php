@@ -22,12 +22,8 @@
 				<?php if ( class_exists( 'YITH_WCWL_Shortcode' ) && FoodcartTheme::$options['wc_wishlist_icon'] ) { ?>
 					<?php
 					$args = array(
-						'browse_wishlist_text' => '<i class="fa fa-check"></i>',
-						'already_in_wishslist_text' => '',
-						'product_added_text' => '',
-						'icon' => 'fa-heart-o',
+						'icon'  => 'none',
 						'label' => '',
-						'link_classes' => 'add_to_wishlist single_add_to_wishlist alt wishlist-icon',
 					);
 					?>
 					<li><?php echo YITH_WCWL_Shortcode::add_to_wishlist( $args );?></li>
